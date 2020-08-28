@@ -2,30 +2,27 @@
 
 This is the source code of our WACV2020 paper "Self-Contained Stylization via Steganographyfor Reverse and Serial Style Transfer".
 
-![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master//teaser.png)
+![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/teaser.png)
 
 ## Abstract 
 Style transfer has been widely applied to give real-world images a new artistic look. However, given a stylized image, the attempts to use typical style transfer methods for de-stylization or transferring it again into another style usually lead to artifacts or undesired results. We realize that these issues are originated from the content inconsistency between the original image and its stylized output. Therefore, in this paper we advance to keep the content information of the input image during the process of style transfer by the power of steganography, with two approaches proposed: a two-stage model and an end-to-end model. We conduct extensive experiments to successfully verify the capacity of our models, in which both of them are able to not only generate stylized images of quality comparable with the ones produced by typical style transfer methods, but also effectively eliminate the artifacts introduced in reconstructing original input from a stylized image as well as performing multiple times of style transfer in series. 
 
-## Results
-![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master//result.gif)
-![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master//quant.png)
-## Requirements
-- Python 3.5+
-- PyTorch 0.4+
-- TorchVision
-- Pillow
-- tqdm
+## Method
+We pro
 
-## Usage
-In each model folder, model.py define the model. In model.py, SelfContained_Style_Transfer moudle has the operations for regular, serial and reverse style transfer.
-### Testing
-1. download [[pretrained_weights]](https://drive.google.com/drive/folders/1ZzD6tqVS57TtlD7dDHquruGWp0GKkl_X?usp=sharing) in ./<method_dir>/model_weights/
-2. test.py can operate regular, serial and reverse style transfer. 
-### Training 
-1. Download [MSCOCO images](http://mscoco.org/dataset/#download) and [Wikiart images](https://www.kaggle.com/c/painter-by-numbers).
-2. Download [[pretrained_weights]](https://drive.google.com/drive/folders/1ZzD6tqVS57TtlD7dDHquruGWp0GKkl_X?usp=sharing)
-3. run train.py as floder REMEAD.md
+### Two-Stage Model
+Our two-stage model is a pipeline built upon a straightforward integration of style transfer and steganography networks, as shown in Figure 3(a). In the first stage, we stylize the content image according to the style image based on a style transfer model. Afterward in the second stage, the steganography network learns an encoder to hide the content information of into the stylized image It from the previous stage, as well as a paired decoder which is able to retrieve the hidden information from the encoded image.
+
+![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/two-stage/model.png)
+
+### End-to-End Model
+
+Aside from the two-stage model which can take several style transfer methods as its base (please refer to our supplementary material), our end-to-end model digs deeply into the characteristic of AdaIN for enabling image stylization and content information encryption simultaneously in a single network.
+![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/end-to-end/model.png)
+
+## Results
+![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/result.gif)
+![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/quant.png)
 
 ## Citation
 ```
@@ -39,3 +36,4 @@ In each model folder, model.py define the model. In model.py, SelfContained_Styl
 
 ## Acknowledgements
 Part of the code is based on [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
+This project is supported by MediaTek Inc., MOST-108-2636-E-009-001, MOST-108- 2634-F-009 -007, and MOST-108-2634-F-009-013. We are grateful to the National Center for Highperformance Computing for computer time and facilities.
