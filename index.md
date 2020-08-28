@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+# Self-Contained Stylization via Steganographyfor Reverse and Serial Style Transfer
+[[arxiv]](https://arxiv.org/pdf/1812.03910.pdf)[[WACV2020]](https://openaccess.thecvf.com/content_WACV_2020/html/Chen_Self-Contained_Stylization_via_Steganography_for_Reverse_and_Serial_Style_Transfer_WACV_2020_paper.html)[[poster]](./poster.pdf)
 
-You can use the [editor on GitHub](https://github.com/IShengFang/Self-Contained_Stylization/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is the source code of our WACV2020 paper "Self-Contained Stylization via Steganographyfor Reverse and Serial Style Transfer".
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master//teaser.png)
 
-### Markdown
+## Abstract 
+Style transfer has been widely applied to give real-world images a new artistic look. However, given a stylized image, the attempts to use typical style transfer methods for de-stylization or transferring it again into another style usually lead to artifacts or undesired results. We realize that these issues are originated from the content inconsistency between the original image and its stylized output. Therefore, in this paper we advance to keep the content information of the input image during the process of style transfer by the power of steganography, with two approaches proposed: a two-stage model and an end-to-end model. We conduct extensive experiments to successfully verify the capacity of our models, in which both of them are able to not only generate stylized images of quality comparable with the ones produced by typical style transfer methods, but also effectively eliminate the artifacts introduced in reconstructing original input from a stylized image as well as performing multiple times of style transfer in series. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Results
+![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master//result.gif)
+![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master//quant.png)
+## Requirements
+- Python 3.5+
+- PyTorch 0.4+
+- TorchVision
+- Pillow
+- tqdm
 
-```markdown
-Syntax highlighted code block
+## Usage
+In each model folder, model.py define the model. In model.py, SelfContained_Style_Transfer moudle has the operations for regular, serial and reverse style transfer.
+### Testing
+1. download [[pretrained_weights]](https://drive.google.com/drive/folders/1ZzD6tqVS57TtlD7dDHquruGWp0GKkl_X?usp=sharing) in ./<method_dir>/model_weights/
+2. test.py can operate regular, serial and reverse style transfer. 
+### Training 
+1. Download [MSCOCO images](http://mscoco.org/dataset/#download) and [Wikiart images](https://www.kaggle.com/c/painter-by-numbers).
+2. Download [[pretrained_weights]](https://drive.google.com/drive/folders/1ZzD6tqVS57TtlD7dDHquruGWp0GKkl_X?usp=sharing)
+3. run train.py as floder REMEAD.md
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Citation
+```
+@inproceedings{chen20wacv,
+ title = {Self-Contained Stylization via Steganography for Reverse and Serial Style Transfer},
+ author = {Hung-Yu Chen and I-Sheng Fang and Chia-Ming Cheng and Wei-Chen Chiu},
+ booktitle = {IEEE Winter Conference on Applications of Computer Vision (WACV)},
+ year = {2020}
+} 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/IShengFang/Self-Contained_Stylization/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Acknowledgements
+Part of the code is based on [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
