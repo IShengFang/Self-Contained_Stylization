@@ -1,7 +1,12 @@
-# Hung-Yu Chen*[1] and [I-Sheng Fang](https://ishengfang.github.io)*[1] and Chia-Ming Cheng[2] and [Wei-Chen Chiu](https://walonchiu.github.io)[1]
-## [1]National Chiao Tung University, Taiwan, [2] MediaTek Inc., Taiwan
-*Both authors contribute equally.
+ <center><font size="+2">
+ Hung-Yu Chen†[1] and [I-Sheng Fang](https://ishengfang.github.io)†[1] and Chia-Ming Cheng[2] and [Wei-Chen Chiu](https://walonchiu.github.io)[1]
+</center></font>
+ <center><font size="+1">
+ [1]National Chiao Tung University, Taiwan, [2] MediaTek Inc., Taiwan
+ </center></font>
+† Both authors contribute equally.
 
+---------------------------------------
 [[arxiv]](https://arxiv.org/pdf/1812.03910.pdf)[[WACV2020]](https://openaccess.thecvf.com/content_WACV_2020/html/Chen_Self-Contained_Stylization_via_Steganography_for_Reverse_and_Serial_Style_Transfer_WACV_2020_paper.html)[[poster]](./poster.pdf)
 
 ![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/teaser.png)
