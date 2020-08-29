@@ -49,7 +49,7 @@ In serial style transfer, our proposed methods are more similar to their respect
 
 We perform reverse and serial style transfer with different models and comparethe outputs with respect to their corresponding expectations. The averaged L2 distance, structural similarity (SSIM), and learned perceptual image patch similarity (LPIPS) are used to measure the difference and the results are shown in Table 2. 
 
-Both our models perform better than the base-lines. Particularly, our two-stage model performs the bestfor reverse style transfer while the end-to-end model doesso for serial style transfer. We believe that our two stage model benefits from its larger amount of encrypted information and the design of identity mapping, leading to the better result in reverse style transfer, and the end-to-end modelshows its advantage in having less information to hide, making it more robust to the propagated error caused by serialstyle transfer.
+Both our models perform better than the baselines. Particularly, our two-stage model performs the bestfor reverse style transfer while the end-to-end model doesso for serial style transfer. We believe that our two stage model benefits from its larger amount of encrypted information and the design of identity mapping, leading to the better result in reverse style transfer, and the end-to-end modelshows its advantage in having less information to hide, making it more robust to the propagated error caused by serialstyle transfer.
 ## Citation
 ```
 @inproceedings{chen20wacv,
