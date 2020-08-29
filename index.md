@@ -11,7 +11,7 @@ Style transfer has been widely applied to give real-world images a new artistic 
 Typical style transfer approach aims to transfer the style of the content photo according to the one of the reference style image. However, the problem of reverse style transfer for removing the stylization of a stylized image to recover the original content photo is rarely discussed. Besides, no prior work has discussed the problem of serial style transfer which transfers a stylized image into another style but preserves the content of original image. None of the existing methods can easily tackle these two problems, where the original photo and its stylized image have *content inconsistency* due to the stylization.
 
 ## Method
-To resolve the *content inconsistency*, we propose to integrate the idea of *steganography* with *style transfer*, where the content information of the original photo is hidden into the stylized output. We have two methods proposed in our paper, Two-stage model and end-to-end model.
+To resolve the *content inconsistency*, we propose to integrate the idea of **steganography** with **style transfer**. We call it **Self-Contained Stylization**, where the content information of the original photo is hidden into the stylized output. We have two methods proposed in our paper, Two-stage model and end-to-end model.
 
 ### Two-Stage Model
 Our two-stage model is a pipeline built upon a straightforward integration of style transfer and steganography networks, as shown in Figure 3(a). In the first stage, we stylize the content image according to the style image based on a style transfer model. Afterward in the second stage, the steganography network learns an encoder to hide the content information of into the stylized image It from the previous stage, as well as a paired decoder which is able to retrieve the hidden information from the encoded image.
@@ -30,9 +30,7 @@ We compare our proposed models to the baselines from Gatys *et al.* and AdaIN wi
 ![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/result.gif)
 In regular style transfer, given content and style images, our model can well perform typical style transfer with the content feature seamlessly hidden into the resultant stylized images. 
 
-In reverse style transfer, we are able to easily reconstruct the original photos solely based on these encoded stylized images. Although the results of our two-stageand end-to-end models have some mild color patches andslight color shift respectively, they both well reconstruct theoverall structure of the content image. 
-
-Please note that our proposed methods **do not need the original image** to achieve reverse style transfer.
+In reverse style transfer, we are able to easily reconstruct the original photos solely based on these encoded stylized images. Although the results of our two-stageand end-to-end models have some mild color patches andslight color shift respectively, they both well reconstruct theoverall structure of the content image. Please note that our proposed methods **do not need the original image** to achieve reverse style transfer.
 
 In serial style transfer, our proposed methods are more similar to their respective expectations than the ones from baselines whichare deeply influenced by the previous stylization. Our model can perform *multiple style transfers* in series without requiring the original content photo.
 
@@ -41,7 +39,7 @@ In serial style transfer, our proposed methods are more similar to their respect
 ### Quantitative Evaluation
 ![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/quant.png)
 
-We perform reverse and serial style transfer with different models and comparethe outputs with respect to their corresponding expectations. The averaged L2 distance, structural similarity (SSIM), andlearned perceptual image patch similarity (LPIPS) are used to measure the difference and the results are shown in Table. 
+We perform reverse and serial style transfer with different models and comparethe outputs with respect to their corresponding expectations. The averaged L2 distance, structural similarity (SSIM), and learned perceptual image patch similarity (LPIPS) are used to measure the difference and the results are shown in Table 2. 
 
 Both our models perform better than the base-lines. Particularly, our two-stage model performs the bestfor reverse style transfer while the end-to-end model doesso for serial style transfer. We believe that our two stage model benefits from its larger amount of encrypted information and the design of identity mapping, leading to the better result in reverse style transfer, and the end-to-end modelshows its advantage in having less information to hide, making it more robust to the propagated error caused by serialstyle transfer.
 ## Citation
@@ -55,5 +53,6 @@ Both our models perform better than the base-lines. Particularly, our two-stage 
 ```
 
 ## Acknowledgements
-Part of the code is based on [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
+Part of the code is based on [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN).
+
 This project is supported by MediaTek Inc., MOST-108-2636-E-009-001, MOST-108- 2634-F-009 -007, and MOST-108-2634-F-009-013. We are grateful to the National Center for Highperformance Computing for computer time and facilities.
