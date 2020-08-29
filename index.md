@@ -1,5 +1,5 @@
 
- Hung-Yu Chen†[1] and [I-Sheng Fang](https://ishengfang.github.io)†[1] and Chia-Ming Cheng[2] and [Wei-Chen Chiu](https://walonchiu.github.io)[1]
+ Hung-Yu Chen†[1], [I-Sheng Fang](https://ishengfang.github.io)†[1], Chia-Ming Cheng[2] and [Wei-Chen Chiu](https://walonchiu.github.io)[1]
 
  [1]National Chiao Tung University, Taiwan, [2] MediaTek Inc., Taiwan
 
