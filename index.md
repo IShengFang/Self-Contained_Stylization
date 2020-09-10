@@ -6,7 +6,7 @@
 † Both authors contribute equally.
 
 ---------------------------------------
-[[arxiv]](https://arxiv.org/pdf/1812.03910.pdf)[[WACV2020]](https://openaccess.thecvf.com/content_WACV_2020/html/Chen_Self-Contained_Stylization_via_Steganography_for_Reverse_and_Serial_Style_Transfer_WACV_2020_paper.html)[[poster]](./poster.pdf)[[code]](https://github.com/IShengFang/Self-Contained_Stylization)
+[[arxiv]](https://arxiv.org/pdf/1812.03910.pdf)[[WACV2020]](https://openaccess.thecvf.com/content_WACV_2020/html/Chen_Self-Contained_Stylization_via_Steganography_for_Reverse_and_Serial_Style_Transfer_WACV_2020_paper.html)[[poster]](https://raw.githubusercontent.com/IShengFang/Self-Contained_Stylization/master/poster.pdf)[[code]](https://github.com/IShengFang/Self-Contained_Stylization)
 
 ![](https://github.com/IShengFang/Self-Contained_Stylization/raw/master/teaser.png)
 
