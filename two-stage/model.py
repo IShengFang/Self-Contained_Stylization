@@ -249,7 +249,7 @@ class SelfContained_Style_Transfer(nn.Module):
 
         self.message_decoder = Message_Decoder(
             input_width = self.image_size, 
-            messenge_shape=( self.vgg_relu_4_1_dim, int(self.image_size/self.down_scale), int(self.image_size/self.down_scale)))
+            content_feat_shape=( self.vgg_relu_4_1_dim, int(self.image_size/self.down_scale), int(self.image_size/self.down_scale)))
         self.message_decoder.load_state_dict(torch.load(message_decoder_path))
 
     def style_transfer_stage(self,content, style):
