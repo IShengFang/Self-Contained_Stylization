@@ -21,11 +21,11 @@ Style transfer has been widely applied to give real-world images a new artistic 
 ## Usage
 In each model folder, model.py define the model. In model.py, SelfContained_Style_Transfer moudle has the operations for regular, serial and reverse style transfer.
 ### Testing
-1. download [[pretrained_weights]](https://drive.google.com/drive/folders/1ZzD6tqVS57TtlD7dDHquruGWp0GKkl_X?usp=sharing) in ./<method_dir>/model_weights/
+1. download [[pretrained_weights]](https://drive.google.com/drive/folders/1ZjvBxdezYnvFwEs42obnewRHbbfSfo7W?usp=sharing) in ./<method_dir>/model_weights/
 2. test.py can operate regular, serial and reverse style transfer. 
 ### Training 
 1. Download [MSCOCO images](http://mscoco.org/dataset/#download) and [Wikiart images](https://www.kaggle.com/c/painter-by-numbers).
-2. Download [[pretrained_weights]](https://drive.google.com/drive/folders/1ZzD6tqVS57TtlD7dDHquruGWp0GKkl_X?usp=sharing)
+2. Download [[pretrained_weights]](https://drive.google.com/drive/folders/1ZjvBxdezYnvFwEs42obnewRHbbfSfo7W?usp=sharing)
 3. run train.py as floder REMEAD.md
 
 ## Citation
