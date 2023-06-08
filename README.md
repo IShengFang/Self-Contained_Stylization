@@ -29,7 +29,7 @@ In each model folder, model.py define the model. In model.py, SelfContained_Styl
 3. run train.py as floder REMEAD.md
 
 ## Citation
-```
+```Bibtex
 @inproceedings{chen20wacv,
  title = {Self-Contained Stylization via Steganography for Reverse and Serial Style Transfer},
  author = {Hung-Yu Chen and I-Sheng Fang and Chia-Ming Cheng and Wei-Chen Chiu},
